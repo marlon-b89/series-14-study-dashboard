@@ -1,67 +1,54 @@
-# Series 14 Study Dashboard
+# Series 14 Study Hub
 
-An interactive, chapter-by-chapter study dashboard for the **FINRA Series 14 Compliance Official Qualification Examination**, covering every named SEC, FINRA, MSRB, NYSE, and Nasdaq rule in the STC 41st Edition manual.
+A complete study system for the **FINRA Series 14 — Compliance Official Qualification Examination** (110 items, 175 minutes, 70% to pass).
 
-**🔗 Live site:** https://marlon-b89.github.io/series-14-study-dashboard/
+**Live site:** [marlon-b89.github.io/series-14-study-dashboard/](https://marlon-b89.github.io/series-14-study-dashboard/)
 
 ## What's inside
 
-**289 rules indexed across 82 sections**, organized into all 13 chapters of the exam curriculum.
+The hub landing page provides:
 
-| Ch | Title | Rules | Sections |
-|---|---|---|---|
-| 1 | Public and Private Offerings | 29 | 7 |
-| 2 | Underwriting | 23 | 5 |
-| 3 | Equity Research & '34 Act | 31 | 7 |
-| 4 | Equity Trading and Settlement | 18 | 6 |
-| 5 | SEC Trading Rules (Reg NMS/SHO) | 18 | 5 |
-| 6 | SRO Trading Rules | 19 | 7 |
-| 7 | Trade Reporting (ACT, TRACE, CAT) | 22 | 6 |
-| 8 | Customer Accounts (Reg BI, AML, Penny Stock) | 28 | 8 |
-| 9 | Margin (Regulation T) | 15 | 6 |
-| 10 | General Supervision | 22 | 6 |
-| 11 | Business Conduct Rules | 22 | 6 |
-| 12 | Communications with the Public | 22 | 7 |
-| 13 | Financial Responsibility | 20 | 6 |
+- **6-Week Study Plan** — Daily topics calibrated to the FINRA blueprint. Weeks 1-2 front-load Registration and Investment Banking (F6/F7), Weeks 3-4 hit Markets and Supervision (F2/F5, 40 of 110 items), Week 5 covers Sales Practice (F8/F9), Week 6 is dedicated review.
+- **Flashcards** — 114 cards across 9 decks, sized to the F1-F9 item counts. Flip, rate, track. Progress saves per deck.
+- **Deep Dives** — Long-form write-ups on the 10 highest-leverage concepts: Reg BI, Reg NMS, Reg SHO, Reg M, Net Capital (15c3-1), Customer Protection (15c3-3), Rule 3110 Supervision, Regulation D, MSRB G-37, FINRA 2210.
+- **Real-World Examples** — 15 case studies: enforcement actions, operational scenarios, and market events tied to specific rules.
+- **Visualizations** — Exam weighting doughnut, Rule 15c3-1 haircut ladder, Reg M restricted period bars, IPO timeline, MSRB G-37 two-year ban chart, T+1 settlement flow.
+- **Rules Reference** — The full 289-rule chapter-by-chapter dashboard at [`/rules/`](./rules/). Every FINRA/SEC/MSRB rule with exact language, core concept, parameters, and exceptions.
 
-## Every rule card includes
+## Structure
 
-1. **Exact Language** — regulatory text from the manual
-2. **Core Concept** — plain-English explanation of what the rule does
-3. **Parameters** — thresholds, timeframes, filing deadlines, covered parties
-4. **Exceptions** — exemptions, carve-outs, and safe harbors
-5. **Exam Tip** — mnemonic, common trap, or memory hook
-
-## Features
-
-- **Accordion navigation** — one rule card open at a time to reduce clutter
-- **Global search** — filter rules by name, concept, language, parameters, or tip
-- **URL-addressable chapters** — bookmark specific chapters (e.g. `#chapter-8`)
-- **Mobile responsive** — sidebar collapses to a slide-in drawer on smaller screens
-- **Zero backend** — pure static HTML/CSS/JS, works offline after first load
-
-## Tech
-
-Static site — no build step, no dependencies.
-
-- HTML5 / CSS (custom design system, no frameworks)
-- Vanilla JavaScript (ES5-compatible)
-- Google Fonts: Fraunces (headings), Inter (body), JetBrains Mono (labels)
-
-## Local development
-
-```bash
-git clone https://github.com/marlon-b89/series-14-study-dashboard.git
-cd series-14-study-dashboard
-# Open index.html in a browser, or:
-python3 -m http.server 8000
-# then visit http://localhost:8000
+```
+/                    → Study companion (landing page)
+  index.html
+  app.js
+  styles.css
+  data/              → flashcards, deep-dives, examples, program, blueprint
+/rules/              → Rules reference dashboard
+  index.html
+  app.js
+  styles.css
+  data/              → 13 chapters × 289 rules
 ```
 
-## Content attribution
+## FINRA Series 14 exam blueprint
 
-Rule content is extracted from the **Securities Training Corporation (STC) Series 14 manual, 41st Edition**. This dashboard is a personal study aid and is not affiliated with or endorsed by STC, FINRA, the SEC, or any regulatory body. All regulatory citations point to publicly available rules from SEC, FINRA, and MSRB rulebooks.
+| Code | Function | Items |
+|---|---|---|
+| F1 | Regulatory Agencies and Statutory Framework | 3 |
+| F2 | Markets and Operations | 20 |
+| F3 | Broker-Dealer Operations | 10 |
+| F4 | Credit Regulation and Net Capital | 7 |
+| F5 | General Supervision | 20 |
+| F6 | Investment Banking and Corporate Finance | 15 |
+| F7 | Registration | 9 |
+| F8 | Sales Practice — Customers and Employees | 16 |
+| F9 | Sales Practice — Solicitations and Communications | 10 |
+| **Total** | | **110** |
 
 ## License
 
 MIT — see [LICENSE](./LICENSE).
+
+## Attribution
+
+Built for compliance professionals preparing for the FINRA Compliance Official exam. Rule content sourced from FINRA, SEC, and MSRB publicly-available rulebooks; STC 41st Edition study manual referenced for structure.

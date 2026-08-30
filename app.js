@@ -20,6 +20,14 @@
   // ==================== Routing ====================
   const TABS = ["overview", "program", "flashcards", "deep-dives", "examples", "visualizations"];
 
+  // Legacy redirect: old bookmarks to #chapter-N (rules dashboard) now live under /rules/
+  (function redirectLegacyChapterHash() {
+    const m = window.location.hash.match(/^#chapter-(\d+)/i);
+    if (m) {
+      window.location.replace("./rules/#chapter-" + m[1]);
+    }
+  })();
+
   function parseHash() {
     const hash = window.location.hash.replace(/^#/, "");
     if (!hash) return { tab: "overview", param: null };
